@@ -1,0 +1,1 @@
+selected_card = [0,0];
