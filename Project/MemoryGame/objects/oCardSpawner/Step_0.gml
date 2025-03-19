@@ -1,6 +1,5 @@
 if(keyboard_check_pressed(vk_enter)){	
-	instance_cards();
-	shuffle_cards();
+	sNewLVL(num_cards / 2);
 }
 
 if(keyboard_check_pressed(vk_backspace)){

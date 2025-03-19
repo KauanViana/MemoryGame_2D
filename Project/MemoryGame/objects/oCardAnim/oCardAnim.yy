@@ -3,6 +3,7 @@
   "%Name":"oCardAnim",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"oCard","path":"objects/oCard/oCard.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"oCardAnim",
@@ -30,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sCardAnim",
-    "path":"sprites/sCardAnim/sCardAnim.yy",
+    "name":"sCardAnimHide",
+    "path":"sprites/sCardAnimHide/sCardAnimHide.yy",
   },
   "spriteMaskId":null,
   "visible":true,
