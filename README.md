@@ -1,4 +1,4 @@
-# MEMORY GAME (Pre-Alpha)
+# MEMORY GAME (Alpha)
 
 ## Eng-US  
 A simple 2D game created by me using GameMaker and assets from Itch.io to practice my game development skills.  
