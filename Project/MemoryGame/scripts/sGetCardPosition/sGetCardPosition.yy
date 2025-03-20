@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"sGetCardPosition",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"sGetCardPosition",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

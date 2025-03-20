@@ -1,16 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"oCardSpawner",
+  "%Name":"oTextMenu",
   "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"oCardSpawner",
+  "name":"oTextMenu",
   "overriddenProperties":[],
   "parent":{
-    "name":"GameObjects",
-    "path":"folders/Objetos/GameObjects.yy",
+    "name":"Menu",
+    "path":"folders/Objetos/Menu.yy",
   },
   "parentObjectId":null,
   "persistent":false,

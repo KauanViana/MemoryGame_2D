@@ -1,10 +1,14 @@
-selected_card = [0,0];
+selected_card	= [0,0];
 cards_remaining = 0;
+num_cards		= 0;
+lifes			= 5;
 
 function lvl_completed(){
-	var num_cards = instance_number(oCard);
-	cards_remaining = num_cards;
+	var key			= false;					// key to pass the level
+	num_cards		= instance_number(oCard);	// getting the number of cards
+	cards_remaining = num_cards;				// variable to store the amount of cards remaining
 	
+	// Decreasing the amount of cards remaining by the number of green cards
 	for (var i = 0; i < num_cards; i++){
 		var inst = instance_find(oCard, i);
 		if (inst.image_blend == c_green){
@@ -12,12 +16,32 @@ function lvl_completed(){
 		}
 	}
 	
+	// Opening card logic
 	with (oCard){
-		if (other.cards_remaining <= 2 and num_cards > 2 and image_index = 0){
-			hide_card(true);
-			image_index = card_value;
+		// Passing to the next level if level > 1
+		if (other.cards_remaining <= 2 and other.num_cards > 2 and image_index == 0){
+			hide_card(sCardAnimAppear);
+			image_index			= card_value;
+			oPlayer.can_move	= false;
+			key					= true;
+		// Passing to the next level if level = 1
+		} else if (other.cards_remaining <= 2 and other.num_cards == 2 and image_blend == c_green){
+			oPlayer.can_move	= false;
+			key					= true;
 		}
 	}
+	// Returning true if level has been completed
+	return key;
+}
+
+function lvl_failed(){
+	var key =  false;
+	if (lifes == 0) {
+		oPlayer.can_move	= false;
+		key					= true;
+	}
+	
+	return key;
 }
 
 function card_selector(){
@@ -52,8 +76,9 @@ function card_selector(){
 			}	
 		// When cards are not equal
 		} else {
+			lifes -= 1;
 			with (oCard){
-				hide_card(true);
+				hide_card(sCardAnimHide);
 				has_animated = false;
 			}
 		}

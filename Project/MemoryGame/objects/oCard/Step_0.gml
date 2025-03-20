@@ -5,10 +5,9 @@ if (colliding && !place_meeting(x, y, oPlayer)) {
 }
 
 // Bringing cards into the middle of y-axis
-if (y < room_height/2){
-	y += card_speed;
-	anim_key = true;	
-} else if (y > room_height/2){
-	y = room_height/2;
-	anim_key = true;
+if (y < final_y){
+	y += card_speed;	
+} else if (y > final_y){
+	anim_key = sCardAnimHide;
+	y = final_y;
 }

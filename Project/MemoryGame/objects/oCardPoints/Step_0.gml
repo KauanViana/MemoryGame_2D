@@ -1,6 +1,7 @@
 if (keyboard_check_pressed(vk_space)){
 	card_selector();
-	lvl_completed();
+	if (lvl_completed()) alarm[0] = room_speed * 2;
+	if (lvl_failed()) alarm[1] = room_speed * 2;
 }
 
 if (keyboard_check_pressed(vk_backspace)){

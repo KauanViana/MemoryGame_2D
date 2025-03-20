@@ -11,35 +11,36 @@ initial_x		= 676;			// variable for the initial x of player
 initial_y		= 656;			// variable for the initial y of player
 x				= initial_x;	// setting initial x of player
 y				= initial_y;	// setting initial y of player
-last_key		= -1;			// variable for check last key pressed (-1 = none)
+last_key		= [-1, ""];			// variable for check last key pressed (-1 = none)
 player_speed	=  8;			// setting player moving speed
 can_move		= false;		// preventing player from moving at the game start
 
 function player_movement(){
 	// Checking last key pressed
-	if (keyboard_check_pressed(vk_up))		last_key = vk_up;
-	if (keyboard_check_pressed(vk_down))	last_key = vk_down;
-	if (keyboard_check_pressed(vk_right))	last_key = vk_right;
-	if (keyboard_check_pressed(vk_left))	last_key = vk_left;
-	if (keyboard_check_released(last_key))	last_key = -1;
+	if (keyboard_check_pressed(vk_up) or keyboard_check_pressed(ord("W")))					last_key = [vk_up, "W"];
+	if (keyboard_check_pressed(vk_down) or keyboard_check_pressed(ord("S")))				last_key = [vk_down, "S"];
+	if (keyboard_check_pressed(vk_right) or keyboard_check_pressed(ord("D")))				last_key = [vk_right, "D"];
+	if (keyboard_check_pressed(vk_left) or keyboard_check_pressed(ord("A")))				last_key = [vk_left, "A"];
+	if (keyboard_check_released(last_key[0]) or keyboard_check_released(ord(last_key[1])))	last_key = [-1, ""];
+	
 
 	// Moving player according to last key pressed
-	if (last_key == vk_up) {
+	if (last_key[0] == vk_up) {
 	    sprite_index	= sPlayerWalking;	// change sprite to Walking Sprite
 	    obj_direction	= obj_up;			// change index to looking up
 	    y				-= player_speed;	// moving player on the y-axis
 		
-	} else if (last_key == vk_down) {
+	} else if (last_key[0] == vk_down) {
 	    sprite_index	= sPlayerWalking;	// change sprite to Walking Sprite
 	    obj_direction	= obj_down;			// change index to looking down
 	    y				+= player_speed;	// moving player on the y-axis
 		
-	} else if (last_key == vk_right) {
+	} else if (last_key[0] == vk_right) {
 	    sprite_index	= sPlayerWalking;	// change sprite to Walking Sprite
 	    obj_direction	= obj_right;		// change index to looking right
 	    x				+= player_speed;	// moving player on the x-axis
 		
-	} else if (last_key == vk_left) {
+	} else if (last_key[0] == vk_left) {
 	    sprite_index	= sPlayerWalking;	// change sprite to Walking Sprite
 	    obj_direction	= obj_left;			// change index to looking left 
 	    x				-= player_speed;	// moving player on the x-axis
