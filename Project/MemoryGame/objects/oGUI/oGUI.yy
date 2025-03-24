@@ -13,8 +13,8 @@
   "name":"oGUI",
   "overriddenProperties":[],
   "parent":{
-    "name":"GameObjects",
-    "path":"folders/Objetos/GameObjects.yy",
+    "name":"Objetos",
+    "path":"folders/Objetos.yy",
   },
   "parentObjectId":null,
   "persistent":false,

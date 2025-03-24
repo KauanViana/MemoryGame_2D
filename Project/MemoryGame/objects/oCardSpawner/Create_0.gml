@@ -32,7 +32,7 @@ function instance_cards(){
 function remove_cards(){
 	// Destroying all the cards present in the room
 	with (oCard) {
-	    instance_destroy();
+		instance_destroy();
 	}
 	
 	// Adding new values to the cards_values[] by the number of cards
@@ -45,3 +45,6 @@ function reset_cards(){
 	cards_values	= [];		// restoring cards_values[]
 	percentual_startX = 50;
 }
+
+// Starting first level
+alarm[0] = room_speed * 0.5;
