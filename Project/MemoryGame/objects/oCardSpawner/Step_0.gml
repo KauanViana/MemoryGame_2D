@@ -7,5 +7,5 @@ if(keyboard_check_pressed(vk_backspace)){
 }
 
 if(keyboard_check_pressed(vk_delete)){
-	reset_cards();
+	sSwitchRoom(rMenu);
 }
