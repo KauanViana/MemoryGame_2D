@@ -9,7 +9,7 @@ The game currently has only a few basic mechanics, which will be refined and exp
 
 [MemoryGame](/MemoryGame) contains the game executable.  
 
-[Project](/Project) contains the GameMaker project.
+[Project](/Project/MemoryGame) contains the GameMaker project.
 
 ## Pt-BR
 Um jogo 2D simples criado por mim, utilizando GameMaker e assets do Itch.io, para praticar meu desenvolvimento de jogos.
@@ -20,4 +20,4 @@ O jogo no momento possui apenas algumas mecânicas básicas, que com o tempo, se
 
 [MemoryGame](/MemoryGame) contém o executável do jogo.
 
-[Project](/Project) contém o projeto GameMaker. 
+[Project](/Project/MemoryGame) contém o projeto GameMaker. 
